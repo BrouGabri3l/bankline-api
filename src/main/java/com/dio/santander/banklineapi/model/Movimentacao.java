@@ -10,6 +10,8 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
+
+import com.fasterxml.jackson.annotation.JsonFormat;
 @Entity
 @Table(name="tab_movimentacao")
 public class Movimentacao {
@@ -18,9 +20,10 @@ public class Movimentacao {
 	private Integer id;
 	
 	@Column(name="id_conta")
-	private Integer IdConta;
+	private Integer idConta;
 	
-	@Column(name="dt_hora")
+	@Column(name="dt_hora")	
+	@JsonFormat(pattern="yyyy-MM-dd HH:mm:ss")
 	private LocalDateTime dataHora;
 	
 	private Double valor;
@@ -60,10 +63,10 @@ public class Movimentacao {
 		this.tipo = tipo;
 	}
 	public Integer getIdConta() {
-		return IdConta;
+		return idConta;
 	}
 	public void setIdConta(Integer idConta) {
-		IdConta = idConta;
+		this.idConta = idConta;
 	}
 	
 }

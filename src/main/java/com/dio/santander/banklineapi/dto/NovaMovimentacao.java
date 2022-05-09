@@ -5,11 +5,11 @@ import com.dio.santander.banklineapi.model.MovimentacaoTipo;
 public class NovaMovimentacao {
 	private Double valor;
 	
-	private String Descricao;
+	private String descricao;
 	
-	private MovimentacaoTipo Tipo;
+	private MovimentacaoTipo tipo;
 	
-	private Integer IdConta;
+	private Integer idConta;
 
 	public Double getValor() {
 		return valor;
@@ -20,27 +20,27 @@ public class NovaMovimentacao {
 	}
 
 	public String getDescricao() {
-		return Descricao;
+		return descricao;
 	}
 
 	public void setDescricao(String descricao) {
-		Descricao = descricao;
+		this.descricao = descricao;
 	}
 
 	public MovimentacaoTipo getTipo() {
-		return Tipo;
+		return tipo;
 	}
 
 	public void setTipo(MovimentacaoTipo tipo) {
-		Tipo = tipo;
+		this.tipo = tipo;
 	}
 
 	public Integer getIdConta() {
-		return IdConta;
+		return idConta;
 	}
 
 	public void setIdConta(Integer idConta) {
-		IdConta = idConta;
+		this.idConta = idConta;
 	}
 	
 }
