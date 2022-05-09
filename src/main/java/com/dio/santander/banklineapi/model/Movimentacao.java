@@ -17,13 +17,16 @@ public class Movimentacao {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer id;
 	
+	@Column(name="id_conta")
+	private Integer IdConta;
+	
 	@Column(name="dt_hora")
 	private LocalDateTime dataHora;
 	
-	private String descricao;
-	
 	private Double valor;
 	
+	private String descricao;
+
 	@Enumerated(EnumType.STRING)
 	private MovimentacaoTipo tipo;
 	public Integer getId() {
@@ -55,6 +58,12 @@ public class Movimentacao {
 	}
 	public void setTipo(MovimentacaoTipo tipo) {
 		this.tipo = tipo;
+	}
+	public Integer getIdConta() {
+		return IdConta;
+	}
+	public void setIdConta(Integer idConta) {
+		IdConta = idConta;
 	}
 	
 }
